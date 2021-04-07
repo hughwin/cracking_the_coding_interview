@@ -10,5 +10,11 @@ public class Tests {
         Assert.assertFalse(Solutions.isUnique("aaabbbbccccddddee"));
     }
 
+    @Test
+    public void isUniqueNoExtraSpace(){
+        Assert.assertTrue(Solutions.isUniqueNoExtraSpace("abcdefg"));
+        Assert.assertFalse(Solutions.isUniqueNoExtraSpace("aaabbbbccccddddee"));
+    }
+
 
 }

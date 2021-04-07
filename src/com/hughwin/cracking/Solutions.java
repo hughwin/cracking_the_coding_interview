@@ -19,4 +19,15 @@ public class Solutions {
         return true;
     }
 
+    public static boolean isUniqueNoExtraSpace(String str){
+        char[] stringChar = str.toCharArray();
+        for(int i = 0; i < stringChar.length ; i++){
+            for(int j = 0; j < stringChar.length ; j++){
+                if(i == j) continue;
+                if(stringChar[i] == stringChar[j]) return false;
+            }
+        }
+        return true;
+    }
+
 }
