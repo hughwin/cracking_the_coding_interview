@@ -16,5 +16,10 @@ public class Tests {
         Assert.assertFalse(Solutions.isUniqueNoExtraSpace("aaabbbbccccddddee"));
     }
 
+    @Test
+    public void stringPermutation(){
+        Assert.assertTrue(Solutions.stringPermutation("thisisapermutation", "permutationisathis"));
+        Assert.assertFalse(Solutions.stringPermutation("abcd", "defg"));
+    }
 
 }

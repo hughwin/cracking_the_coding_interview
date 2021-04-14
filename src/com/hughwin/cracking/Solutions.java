@@ -1,5 +1,6 @@
 package com.hughwin.cracking;
 
+import java.util.Arrays;
 import java.util.HashSet;
 
 public class Solutions {
@@ -28,6 +29,16 @@ public class Solutions {
             }
         }
         return true;
+    }
+
+    //1.2 String permutation
+
+    public static boolean stringPermutation(String stringA, String stringB){
+        char[] charArrayA = stringA.toCharArray();
+        char[] charArrayB = stringB.toCharArray();
+        Arrays.sort(charArrayA);
+        Arrays.sort(charArrayB);
+        return Arrays.equals(charArrayA, charArrayB);
     }
 
 }
