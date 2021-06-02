@@ -22,4 +22,22 @@ public class Tests {
         Assert.assertFalse(Solutions.stringPermutation("abcd", "defg"));
     }
 
+    @Test
+    public void stringCompression(){
+        Assert.assertEquals("a2b1c5a3", Solutions.stringCompression("aabcccccaaa"));
+    }
+
+    @Test
+    public void withOneSingleChar() {
+        Assert.assertEquals("a", Solutions.stringCompression("a"));
+    }
+
+    @Test
+    public void withThreeChars() {
+        Assert.assertEquals("a3", Solutions.stringCompression("aaa"));
+    }
+
+
+
+
 }

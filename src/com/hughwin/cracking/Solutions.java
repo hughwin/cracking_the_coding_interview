@@ -33,12 +33,33 @@ public class Solutions {
 
     //1.2 String permutation
 
-    public static boolean stringPermutation(String stringA, String stringB){
+    public static boolean stringPermutation(String stringA, String stringB) {
         char[] charArrayA = stringA.toCharArray();
         char[] charArrayB = stringB.toCharArray();
         Arrays.sort(charArrayA);
         Arrays.sort(charArrayB);
         return Arrays.equals(charArrayA, charArrayB);
+    }
+
+    public static String stringCompression(String str) {
+        StringBuilder sb = new StringBuilder();
+        Character current = str.charAt(0);
+        int count = 0, index = 0;
+        char[] chars = str.toCharArray();
+        while (index < chars.length) {
+            if (chars[index] != current) {
+                sb.append(current);
+                sb.append(count);
+                count = 0;
+                current = chars[index];
+            }
+            count++;
+            index++;
+        }
+        sb.append(current);
+        sb.append(count);
+        if(sb.toString().length() >= str.length()) return str;
+        return sb.toString();
     }
 
 }
